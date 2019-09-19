@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Observer___Notification_Pattern" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLH-br-rDA">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxm-dg-K9a">
+                                <rect key="frame" x="150" y="94" width="114.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyK-aK-QZn">
+                                <rect key="frame" x="187.5" y="131" width="39" height="30"/>
+                                <state key="normal" title="Click!"/>
+                                <connections>
+                                    <action selector="clickBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Jg-VZ-DKi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fxm-dg-K9a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="2dU-rq-7YP"/>
+                            <constraint firstItem="pyK-aK-QZn" firstAttribute="top" secondItem="Fxm-dg-K9a" secondAttribute="bottom" constant="16" id="93d-bc-oP7"/>
+                            <constraint firstItem="nLH-br-rDA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CCv-La-Sem"/>
+                            <constraint firstItem="Fxm-dg-K9a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SzW-MV-UEF"/>
+                            <constraint firstItem="nLH-br-rDA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e2E-NC-SME"/>
+                            <constraint firstItem="pyK-aK-QZn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sq7-ox-1pn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="numLbl" destination="nLH-br-rDA" id="AO3-Rr-z7c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Lkl-2W-97w">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="503-3n-oXH" customClass="SecondViewController" customModule="Observer___Notification_Pattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qgp-9s-wQR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Lmh-5x-cTW">
+                                <rect key="frame" x="192" y="398" width="30" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXQ-IY-Sjx">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="50"/>
+                                        <state key="normal" title="One"/>
+                                        <connections>
+                                            <action selector="oneBtnTapped:" destination="503-3n-oXH" eventType="touchUpInside" id="rdS-tq-WaC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arY-Uo-dgS">
+                                        <rect key="frame" x="0.0" y="50" width="30" height="50"/>
+                                        <state key="normal" title="Two"/>
+                                        <connections>
+                                            <action selector="twoBtnTapped:" destination="503-3n-oXH" eventType="touchUpInside" id="SUD-RK-Lxy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="if8-wa-f3g"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Lmh-5x-cTW" firstAttribute="centerX" secondItem="qgp-9s-wQR" secondAttribute="centerX" id="DQK-3o-sBa"/>
+                            <constraint firstItem="Lmh-5x-cTW" firstAttribute="centerY" secondItem="qgp-9s-wQR" secondAttribute="centerY" id="lxt-hc-mPi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZBd-NR-Vf9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3kB-dL-Dsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886" y="113"/>
         </scene>
     </scenes>
 </document>
